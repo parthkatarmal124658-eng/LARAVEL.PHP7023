@@ -1,0 +1,23 @@
+welcome.blade.php
+<h1>Home: First Page</h1>
+
+@php
+    $names = ["salman khan","ritic sola","nishare bhola","ahmad khaire","loki solamon"]
+@endphp
+<ul>
+
+
+@foreach ($names as $n )
+    <li>{{ $n }}</li>
+@endforeach
+</ul>
+
+web.php
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
